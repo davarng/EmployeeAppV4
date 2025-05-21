@@ -21,7 +21,7 @@ namespace EmployeesApp.Web.Controllers
                 {
                     Id = e.Id,
                     Name = e.Name,
-                    ShowAsHighlighted = e.Email.StartsWith("ADMIN", StringComparison.CurrentCultureIgnoreCase),
+                    ShowAsHighlighted = service.CheckIsVIP(e),
                 })
                 .ToArray()
             };

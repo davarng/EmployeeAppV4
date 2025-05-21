@@ -58,5 +58,8 @@ namespace EmployeesApp.Web.Services
 
         public Employee GetById(int id) => employees
             .Single(e => e.Id == id);
+
+        public bool CheckIsVIP(Employee employee) =>
+            employee.Email.StartsWith("ADMIN", StringComparison.CurrentCultureIgnoreCase);
     }
 }
