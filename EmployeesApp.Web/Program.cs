@@ -4,6 +4,7 @@ namespace EmployeesApp.Web
     {
         public static void Main(string[] args)
         {
+            //First commit
             var builder = WebApplication.CreateBuilder(args);
             builder.Services.AddControllersWithViews();
             var app = builder.Build();
