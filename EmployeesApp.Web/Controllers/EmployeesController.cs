@@ -7,12 +7,12 @@ using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace EmployeesApp.Web.Controllers
 {
-    public class EmployeesController(IEmployeeService service, ActionFilterAttribute Attribute) : Controller
+    public class EmployeesController(IEmployeeService service) : Controller
     {
 
 
         [HttpGet("")]
-        [ServiceFilter(typeof(Attribute))]
+        [ServiceFilter(typeof(MyLogFilterAttribute))]
         public IActionResult Index()
         {
             var model = service.GetAll();
