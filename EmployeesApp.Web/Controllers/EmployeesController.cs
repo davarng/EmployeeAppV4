@@ -3,14 +3,16 @@ using EmployeesApp.Web.Models;
 using EmployeesApp.Web.Services;
 using EmployeesApp.Web.Views.Employees;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Filters;
 
 namespace EmployeesApp.Web.Controllers
 {
-    public class EmployeesController(IEmployeeService service) : Controller
+    public class EmployeesController(IEmployeeService service, ActionFilterAttribute Attribute) : Controller
     {
 
 
         [HttpGet("")]
+        [ServiceFilter(typeof(Attribute))]
         public IActionResult Index()
         {
             var model = service.GetAll();

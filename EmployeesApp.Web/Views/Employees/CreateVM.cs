@@ -7,6 +7,7 @@ namespace EmployeesApp.Web.Views.Employees
     {
         [Required(ErrorMessage = "You must specify a name")]
         [SuspiciousPerson("Pontus Wittenmark", ErrorMessage = "Suspicious person detected!")]
+        
         public required string Name { get; set; }
 
         [Display(Name = "E-mail")]
