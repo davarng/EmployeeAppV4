@@ -3,38 +3,38 @@ using EmployeesApp.Web.Models;
 
 namespace EmployeesApp.Web.Services
 {
-    public class EmployeeService : IEmployeeService
+    public class OtherEmployeeService : IEmployeeService
     {
         readonly List<Employee> employees =
         [
             new Employee()
             {
                 Id = 562,
-                Name = "Anders Hejlsberg",
+                Name = "Kristina",
                 Email = "Anders.Hejlsberg@outlook.com",
             },
             new Employee()
             {
                 Id = 62,
-                Name = "Kathleen Dollard",
+                Name = "Petter",
                 Email = "k.d@outlook.com",
             },
             new Employee()
             {
                 Id = 15662,
-                Name = "Mads Torgersen",
+                Name = "Olle",
                 Email = "Admin.Torgersen@outlook.com",
             },
             new Employee()
             {
                 Id = 52,
-                Name = "Scott Hanselman",
+                Name = "Sara",
                 Email = "s.h@outlook.com",
             },
             new Employee()
             {
                 Id = 563,
-                Name = "Jon Skeet",
+                Name = "Felicia",
                 Email = "j.s@outlook.com",
             },
         ];
